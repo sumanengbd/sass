@@ -1,0 +1,43 @@
+{
+  "name": "Learn-Sass",
+  "version": "1.0.0",
+  "description": "The starter course for Sass",
+  "main": "gulpfile.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "npm run gulp && concurrently \"npm run gulp-watch\" \"npm run lite\"",
+    "lite": "lite-server",
+    "gulp": "gulp",
+    "gulp-watch": "gulp watch"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "lite-server": "^2.3.0"
+  },
+  "dependencies": {
+    "concurrently": "^3.5.0",
+    "glup": "^1.0.14",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-sass": "^3.1.0",
+    "jquery": "^3.2.1",
+    "lite-server": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sumanengbd/sass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sumanengbd/sass/issues"
+  },
+  "homepage": "https://github.com/sumanengbd/sass"
+}

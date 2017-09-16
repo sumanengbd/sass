@@ -1,0 +1,119 @@
+$font-stack: Helvetica, sans-serif;
+$white-color: #FFF;
+$primary-color: #333;
+$base-color: green;
+
+@import 'mixin';
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+	overflow-y: scroll; 
+}
+
+ul {
+	margin: 0;
+}
+
+.align-center {
+	@include align-center;
+}
+.align-center-h {
+	@include align-center('horizontal');
+}
+.align-center-v {
+	@include align-center('vertical');
+}
+
+// Social color ===============================
+$social-colors: (
+	'facebook': #1DA1F2,
+	'twitter': #3B5998,
+	'google-plus': #E33E2B,
+);
+
+@each $name, $color in $social-colors {
+	// Create the color class
+	.color-#{$name} {
+		color: $color;
+		transition: 0.3s ease color;
+
+		&:hover {
+			color: lighten($color, 10%);
+		}
+	}
+	
+	// create the background class
+	.background-#{$name} {
+		background: $color;
+		color: #FFF;
+		transition: 0.3s ease background;
+
+		&:hover {
+			background: lighten($color, 10%);
+		}
+	}
+}
+
+// BASE STYLES ===================================
+body {
+	margin: 0;
+	color: #000;
+	@include font-size(16px);
+	font-family: $font-stack;
+}
+
+ul {
+	
+	&.list-inline {
+		
+		li {
+			padding-left: 5px;
+			padding-right: 5px;
+			display: inline-block;
+		}
+	}
+}
+
+h1 {
+	color: $white-color;
+	@include font-size(36px);
+	font-weight: 600;
+	padding: 5px;
+	background: $base-color;
+	@include letter-spacing(50, 36);
+}
+
+
+
+.box {
+	width: 1000px;
+	margin: auto;
+}
+
+.nav {
+	margin: 20px 0 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+
+		a {
+			color: #FFF;
+			padding: 10px 25px;
+			text-decoration: none;
+			text-transform: uppercase;
+			background: $primary-color;
+			@include border-radius(3px);
+			@include transition(all 0.5s);
+
+			&:hover{
+				color: #f1f1f1;
+				background: lighten($base-color, 10%);			}
+		}
+	} 
+}
