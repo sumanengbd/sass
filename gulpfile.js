@@ -24,6 +24,10 @@ const gulp 	= require('gulp'),
 	gulp.task('css', () => {
 		return gulp.src(['./src/css/*.css'])
 		.pipe(sass().on('error', sass.logError))
+		.pipe(concat('plugins.css'))
+		.pipe(gulp.dest('./css'))
+		.pipe(rename('plugins.css'))
+		.pipe(cssmin())
 		.pipe(gulp.dest('./css'))
 	});
 
@@ -46,4 +50,4 @@ const gulp 	= require('gulp'),
 	});
 
 	// Task default
-	gulp.task('default', ['sass', ['css'], 'js']);
+	gulp.task('default', ['sass', 'css', 'js']);

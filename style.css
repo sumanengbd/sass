@@ -8,7 +8,8 @@ html {
   overflow-y: scroll; }
 
 ul {
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
 .align-center {
   display: -webkit-box;
@@ -82,11 +83,30 @@ ul {
   .background-google-plus:hover {
     background: #e96758; }
 
+.color-youtube {
+  color: #FE0000;
+  -webkit-transition: 0.3s ease color;
+  transition: 0.3s ease color; }
+  .color-youtube:hover {
+    color: #ff3232; }
+
+.background-youtube {
+  background: #FE0000;
+  color: #FFF;
+  -webkit-transition: 0.3s ease background;
+  transition: 0.3s ease background; }
+  .background-youtube:hover {
+    background: #ff3232; }
+
+.social-media li a {
+  padding: 12px 40px;
+  border-radius: 3px;
+  text-decoration: none; }
+
 body {
   margin: 0;
   color: #000;
   font-size: 16px;
-  font-size: 1rem;
   font-family: Helvetica, sans-serif; }
 
 ul.list-inline li {
