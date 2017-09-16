@@ -1,0 +1,1 @@
+console.log('Hey! I\'m from gulp compiled scripts.js');
